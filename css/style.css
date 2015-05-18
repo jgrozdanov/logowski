@@ -1,0 +1,491 @@
+/*
+
+    LOGOWSKI Styling
+    
+    yellow: #fff100;
+    blue:   #00adee;
+    pink:   #eb008b;
+*/
+
+/* --- General Styling   */
+
+body {
+  width: 100%;
+  background: white;  
+  overflow-x: hidden;
+}
+
+.container_12 {
+  background: white;
+}
+
+.min200 {
+  min-height: 600px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:visited {
+  color: black;
+}
+
+ol {
+  display: block;
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+ol li {
+  margin: 20px;
+  color: black;
+  font-weight: 700;
+}
+
+ol li p {
+  color: black;
+}
+
+/* --- Utility Classes   */
+
+.clear {
+  clear: both;
+  display: block;
+  overflow: hidden;
+  visibility: hidden;
+  width: 0;
+  height: 0;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.top-space-big {
+  margin-top: 35px;
+}
+
+.text-top {
+  margin-top: 10px;
+}
+
+.top-space {
+  margin-top: 25px;
+}
+
+.stretch-empty {
+  padding-top: 165px;
+}
+
+.stretch-left {
+  padding-left: 350px;
+  padding-top: 6px;
+  padding-bottom: 3px;
+}
+
+.bottom-padding {
+  padding-bottom: 35px;
+}
+
+.left-padding {
+  padding-left: 20px;
+}
+
+.layer1 {
+  position: relative;
+  z-index: 1;
+}
+
+.layer5 {
+  position: relative;
+  z-index: 5;
+}
+
+/* --- Clear the floats the CSS3 way   */
+
+
+
+/* --- Typography   */
+
+body {
+  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", "Helvetica", "Segoe UI", Arial, sans-serif;
+  font-size: 18px;
+  color: black;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, a, .h1, .h2 {
+  font-weight: 700;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  padding: 10px;
+}
+
+h1, .h1 {
+  font-size: 2.2em;
+}
+
+h2, .h2 {
+  font-size: 1.25em;
+}
+
+a:active {
+  font-size: 0.9em;
+}
+
+.centered {
+  display: block;
+  width: 100%;
+  text-align: center;
+}
+
+.copyrights {
+  font-size: 0.5em;
+}
+
+.link-color, .link-color:visited {
+  color: #00adee;
+}
+
+.highlight, .highlight:visited {
+  color: #eb008b;
+}
+
+.yellow {
+  color: #fff100;
+}
+
+.inactive {
+  color: #ffc900;
+}
+
+
+/* --- Styling elements and shit   */
+
+.logo {
+  display: block;
+  text-indent: -9999px;
+  width: 280px;
+  height: 33px;
+  background: url(../img/logo.png) no-repeat;
+}
+
+.decorator {
+  min-width: 100%;
+  width: 100%;
+  min-height: 8px;
+  height: 8px;
+  background: #fff100;
+  border-top: 8px solid black;
+  border-bottom: 8px solid #eb008b;
+  margin-bottom: 8px;
+}
+
+.decorator:after {
+  content: "";
+  display: block;
+  width: 100%;
+  min-width: 100%;
+  height: 8px;
+  min-height: 8px;
+  background: #00adee;
+  margin-top: 16px;
+}
+
+.nav {
+  position: relative;
+  margin-left: 30px;
+  margin-top: 5px;
+}
+
+.nav li {
+  position: absolute;
+  left: 120px;
+  top: 0;
+}
+
+.nav li:first-child {
+  left: 0;
+}
+
+.nav li:last-child {
+  left: 245px;
+}
+
+.nav li a {
+  font-size: 0.75em;
+}
+
+.nav li a:active {
+  font-size: 0.7em;
+}
+
+.pad {
+  width: 920px;
+  margin-left: 20px;
+  position: relative;
+  background: #fff100;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.pad.highlight-background {
+  background: #eb008b;
+}
+
+.without-pad {
+  padding-left: 70px;
+}
+
+.banner-heading {
+  position: absolute;
+  left: 55px;
+  top: 40px;
+  line-height: 1.2em;
+}
+
+.torso {
+  position: absolute;
+  min-width: 245px;
+  width: 245px;
+  min-height: 309px;
+  height: 309px;
+  background: url(../img/torso.png) no-repeat;
+  left: 610px;
+  top: 19px;
+  z-index: 0;
+}
+
+.open-closed {
+  position: absolute;
+  top: -4px;
+  right: 0;
+}
+
+.open-closed p {
+  font-weight: 700;
+  text-align: right;
+}
+
+.liner {
+  position: relative;
+}
+
+.liner a, .liner p {
+  display: inline-block;
+}
+
+.uber-button {
+  display: inline-block;
+  padding: 5px 10px 5px 8px;
+  background: black;
+  text-align: right;
+  min-width: 300px;
+  margin-right: 40px;
+}
+
+.uber-button:active {
+  font-size: 1.25em;
+}
+
+.do-it {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.to-left {
+  margin-left: -20px;
+}
+
+.yellow-left:before {
+  content: "";
+  position: absolute;
+  display: block;
+  min-width: 20px;
+  width: 20px;
+  height: 80%;
+  top: 20%;
+  left: -20px;
+  background: #fff100;
+}
+
+.highlight-left:before {
+  content: "";
+  position: absolute;
+  display: block;
+  min-width: 20px;
+  width: 20px;
+  height: 92%;
+  top: 0;
+  left: -20px;
+  background: #eb008b;
+  z-index: 0;
+}
+
+.design-form {
+  margin-top: 30px;
+}
+
+.end {
+  margin-bottom: 20px;
+}
+
+.free-for-legs {
+  margin-bottom: 0;
+  position: relative;
+}
+
+.legs-holder {
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+
+.legs {
+  position: absolute;
+  right: 90px;
+  top: -70px;
+  width: 294px;
+  height: 180px;
+  background: url(../img/legs.png) no-repeat;
+  z-index: 0;
+}
+
+.blvd {
+  padding-top: 35px;
+}
+
+.video {
+  display: block;
+  margin-left: 6px;
+  margin-top: 32px;
+  border: 8px solid black;
+  border-bottom: none;
+}
+
+.instagram-widget {
+  overflow: hidden;
+}
+
+.arrow {
+  display: block;
+  width: 38px;
+  height: 64px;
+  text-indent: -9999px;
+  float: left;
+  margin-top: 42px;
+}
+
+.arrow.left {
+  background: url(../img/arrow-left.png) no-repeat;
+  margin-right: 20px;
+  margin-left: 35px;
+}
+
+.arrow.right {
+  background: url(../img/arrow-right.png) no-repeat;
+  margin-left: 13px;
+}
+
+.slider {
+  overflow: hidden;
+  float: left;
+  position: relative;
+  min-width: 785px;
+  width: 785px;
+  min-height: 180px;
+  height: 180px;
+}
+
+.mover {
+  width: 9000px;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+
+.instagram-photo {
+  width: 150px;
+  height: 150px;
+  float: left;
+  margin-right: 7px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.loading {
+  background: url(../img/loading.gif) no-repeat center -85px;
+}
+
+.outside-form {
+  width: 880px;
+  margin: 0 auto;
+}
+
+.fuck-report {
+  position: absolute;
+  min-height: 50px;
+  height: 50px;
+  min-width: 122px;
+  width: 122px;
+  background: #fff100;
+  bottom: 180px;
+  right: 425px;
+  z-index: 100;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.instagram-big {
+  width: 640px;
+  height: 640px;
+  background: black;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -306px;
+  margin-left: -306px;
+}
+
+.fb-plugin {
+  position: absolute;
+  top: -60px;
+  right: 70px;
+  overflow: hidden;
+}
+
+.twitter-plugin {
+  position: absolute;
+  top: -58px;
+  right: 0;
+}
