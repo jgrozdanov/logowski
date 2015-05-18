@@ -176,8 +176,12 @@ a:active {
   color: #ffc900;
 }
 
+.relative {
+  position: relative;
+}
 
-/* --- Styling elements and shit   */
+
+/* --- Styling elements */
 
 .logo {
   display: block;
@@ -485,7 +489,76 @@ a:active {
 }
 
 .twitter-plugin {
-  position: absolute;
-  top: -58px;
+  position: absolute !important;
+  top: -60px;
   right: 0;
+}
+
+.cirlce-link {
+  width: 115px;
+  height: 19px;
+  display: block;
+  background: url(../img/cirlce-black.png) no-repeat;
+  text-indent: -9999px;
+  margin-top: 7px;
+  margin-left: 103px;
+}
+
+.faq-container {
+  padding: 30px 65px;
+}
+
+.faq {
+  margin-bottom: 20px;
+}
+
+.question {
+  font-weight: bold;
+  color: #eb008b;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
+
+.cirlce-header {
+  width: 100%;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.cirlce-logo {
+  min-width: 163px;
+  min-height: 154px;
+  background: url(../img/cirlce-logo.png) no-repeat;
+  margin-top: 20px;
+  float: left;
+}
+
+.photo-upload {
+  width: 130px;
+  height: 130px;
+  border-radius: 65px;
+  float: left;
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 78px;
+  position: relative;
+}
+
+.photo-upload > p {
+  position: absolute;
+  bottom: -22px;
+  left: 7px;
+  font-weight: bold;
+}
+
+.photo1 {
+  background: #fff100;
+}
+
+.photo2 {
+  background: #eb008b;
+}
+
+.photo3 {
+  background: #00adee;
 }
