@@ -366,7 +366,7 @@ a:active {
 
 .legs {
   position: absolute;
-  right: 90px;
+  right: 0;
   top: -70px;
   width: 294px;
   height: 180px;
@@ -519,10 +519,27 @@ a:active {
   cursor: pointer;
 }
 
+.betahaus {
+  width: 100%;
+}
+
+.betahaus-logo {
+  display: inline-block;
+  width: 176px;
+  height: 38px;
+  text-indent: -9999px;
+  background: url(../img/betahaus.png) no-repeat;
+}
+
+.betahaus .h2 {
+  float: right;
+  margin-top: 8px;
+}
+
 .cirlce-header {
   width: 100%;
   overflow: hidden;
-  margin-top: 20px;
+  margin: 20px 0 40px;
 }
 
 .cirlce-logo {
@@ -542,23 +559,164 @@ a:active {
   margin-left: 50px;
   margin-right: 78px;
   position: relative;
+  cursor: pointer;
 }
 
 .photo-upload > p {
   position: absolute;
   bottom: -22px;
-  left: 7px;
+  left: 9px;
   font-weight: bold;
 }
 
-.photo1 {
+.photo1, .canvas-yellow {
   background: #fff100;
 }
 
-.photo2 {
+.photo2, .canvas-pink {
   background: #eb008b;
 }
 
-.photo3 {
+.photo3, .canvas-blue {
   background: #00adee;
+}
+
+.cirlce-form {
+  width: 920px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.cirlce-form input, .cirlce-form textarea {
+  padding-bottom: 20px;
+  background-color: #fff100;
+  color: #eb008b;
+  border: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin-bottom: 10px;
+  resize: none;
+}
+
+.cirlce-form textarea {
+  display: block;
+  width: 100%;
+  min-height: 150px;
+  padding-right: 30px;
+}
+
+.words-left {
+  position: absolute;
+  right: 0;
+  top: 2px;
+  color: #eb008b;
+}
+
+.form-name, .form-questions {
+  display: block;
+  width: 100%;
+}
+
+.form-submit {
+  display: block;
+  float: right;
+  margin-left: 10px;
+  width: 200px;
+  border: none;
+  background: #eb008b;
+  color: #fff100;
+  font-weight: bold;
+  padding: 10px 0 11px;
+}
+
+.form-portfolio {
+  width: 540px;
+  margin-left: 10px;
+}
+
+.form-mobile {
+  margin-left: 10px;
+  width: 300px;
+}
+
+.form-email {
+  margin-left: 10px;
+  width: 440px;
+}
+
+.form-age, .form-tshirt {
+  width: 150px;
+}
+
+::-webkit-input-placeholder {
+  color: #eb008b;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color: #eb008b;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: #eb008b;
+}
+
+:-ms-input-placeholder {
+  color: #eb008b;
+}
+
+.canvas {
+  background: #fff100;
+  margin-bottom: 10px;
+  padding-bottom: 15px;
+}
+
+.canvas p {
+  color: #eb008b;
+}
+
+canvas {
+  width: 700px;
+  height: 550px;
+  background: white;
+  margin-left: 20px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.canvas-controls {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  top: 40px;
+  right: 50px;
+}
+
+.canvas-colors {
+  width: 60px;
+  float: left;
+}
+
+.canvas-colors > a {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  text-indent: -9999px;
+  margin-bottom: 10px;
+}
+
+.canvas-colors > a:first-child {
+  background: black;
+}
+
+.canvas-actions {
+  width: 140px;
+  float: left;
+}
+
+.canvas-actions a {
+  display: block;
+  margin-bottom: 5px;
 }
