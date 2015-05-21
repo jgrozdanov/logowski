@@ -20,6 +20,20 @@ $(document).ready(function() {
     setTimeout( letsGo, 3000 );
   };
 
+  var displayMessage = function(type, text) {
+    noty({
+      text: text,
+      layout: 'center',
+      type: type,
+      animation: {
+        open: {height: 'toggle'},
+        close: {height: 'toggle'},
+        easing: 'swing',
+        speed: 500
+      }
+    });
+  };
+
   var handleFaqClick = function() {
     var isAnimating;
     $('.answer').hide();
@@ -68,11 +82,9 @@ $(document).ready(function() {
       $('.photo-upload.' + name).css('background-image', 'url(' + e.target.result + ')');
       $('.photo-upload.' + name).css('background-size', 'cover');
       photosUris[name] = e.target.result;
-      console.log(input.files[0]);
     };
 
     reader.readAsDataURL($(this)[0].files[0]);
-    console.log($(this));
   });
 
   $('.overlay').click(function(e) {
@@ -156,6 +168,8 @@ $(document).ready(function() {
   var isSending = false;
 
   $('.cirlce-form form').on('submit', function(e) {
+    var submitButton = $('.form-submit');
+
     e.preventDefault();
     if(isSending) {
       return;
@@ -170,11 +184,12 @@ $(document).ready(function() {
        !$('.form-email').val() || !$('.form-yourself').val() || !$('.form-questions').val() ||
        !$('.form-tshirt').val() || !$('.form-portfolio').val()) {
 
-      // TODO: add message
+      displayMessage('error', 'All fields are required');
       return;
     }
 
     isSending = true;
+    submitButton.text('sending...');
     $.ajax({
       url: backendAddress + '/submit',
       data: new FormData($(this)[0]),
@@ -182,14 +197,27 @@ $(document).ready(function() {
       processData: false,
       type: 'POST',
       success: function(data) {
-        console.log(data);
         $('#token').val('');
+        submitButton.attr('disabled', true);
+        displayMessage('success', 'Sent successfully');
       },
       error: function(xhr, status, error) {
-        console.log(xhr);
+        var responseJson;
+
+        if(xhr.responseText) {
+          responseJson = JSON.parse(xhr.responseText);
+        }
+
+        if(responseJson && responseJson.message) {
+          displayMessage('error', responseJson.message);
+        }
+        else {
+          displayMessage('error', 'There was an error, try again');
+        }
       },
       complete: function() {
         isSending = false;
+        submitButton.text('send');
       }
     });
   });

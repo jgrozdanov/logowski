@@ -734,3 +734,30 @@ canvas {
   top: 54px;
   left: 58px;
 }
+
+.noty_message {
+  font-size: 18px !important;
+  font-weight: bold;
+  padding: 20px !important;
+}
+
+#noty_center_layout_container li {
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.noty_bar {
+  background: black;
+  color: #eb008b;
+  border: none !important;
+  border-radius: 0 !important;
+}
+
+.noty_bar.noty_type_success {
+  color: #fff100;
+}
+
+.noty_bar.noty_type_error {
+  color: black;
+  background: #eb008b;
+}
