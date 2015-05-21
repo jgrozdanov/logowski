@@ -1,8 +1,6 @@
 
 
 $(document).ready(function() {
-  // TODO: this is copy/pasted from script.js, refactor!
-  // TODO: add require.js or some kind of module system
   var backendAddress = 'http://localhost:3000';
 
   $( window ).stellar({
@@ -19,6 +17,10 @@ $(document).ready(function() {
 
     setTimeout( letsGo, 3000 );
   };
+
+  $('.do-it').click( function() {
+    $.scrollTo('.cirlce-header', 400);
+  });
 
   var displayMessage = function(type, text) {
     noty({
@@ -168,8 +170,6 @@ $(document).ready(function() {
             '<div class="faq"><p class="question">' + el.question + '</p><p class="answer">' + el.answer + '</p></div>'
           );
         });
-
-        handleFaqClick();
       }
     }
   });

@@ -1,4 +1,11 @@
 /*
+This CSS resource incorporates links to font software which is the valuable copyrighted
+property of Monotype and/or its suppliers. You may not attempt to copy, install,
+redistribute, convert, modify or reverse engineer this font software. Please contact Monotype
+with any questions regarding Web Fonts:  http://www.linotype.com
+*/
+
+/*
 
     LOGOWSKI Styling
     
@@ -8,6 +15,24 @@
 */
 
 /* --- General Styling   */
+
+
+@import url("http://fast.fonts.net/lt/1.css?apiType=css&c=fd9d06fe-d659-4573-ab17-d6763d9eca09&fontids=674399,694015,694021");
+@font-face{
+  font-family:"HelveticaNeueW02-UltLt";
+  src:url("Fonts/674399/787ee748-9cce-45a0-910b-6b5c6e87e327.eot?#iefix");
+  src:url("Fonts/674399/787ee748-9cce-45a0-910b-6b5c6e87e327.eot?#iefix") format("eot"),url("Fonts/674399/b39b5378-b594-45fe-8067-fc4385d08520.woff2") format("woff2"),url("Fonts/674399/84558c76-9f1b-44d2-ac62-d7937f43809b.woff") format("woff"),url("Fonts/674399/411a88fe-e483-4fb8-af42-8369ebb1138d.ttf") format("truetype"),url("Fonts/674399/6dfe33a4-0ad5-4c85-8e01-f48ecfe3c167.svg#6dfe33a4-0ad5-4c85-8e01-f48ecfe3c167") format("svg");
+}
+@font-face{
+  font-family:"HelveticaNeueW02-45Ligh";
+  src:url("Fonts/694015/88fcd49a-13c7-4d0c-86b1-ad1e258bd75d.eot?#iefix");
+  src:url("Fonts/694015/88fcd49a-13c7-4d0c-86b1-ad1e258bd75d.eot?#iefix") format("eot"),url("Fonts/694015/7732d6de-bd05-4c17-ae43-99e9a02edf31.woff2") format("woff2"),url("Fonts/694015/9a2e4855-380f-477f-950e-d98e8db54eac.woff") format("woff"),url("Fonts/694015/fa82d0ee-4fbd-4cc9-bf9f-226ad1fcbae2.ttf") format("truetype"),url("Fonts/694015/48d599a6-92b5-4d43-a4ac-8959f6971853.svg#48d599a6-92b5-4d43-a4ac-8959f6971853") format("svg");
+}
+@font-face{
+  font-family:"HelveticaNeueW02-55Roma";
+  src:url("Fonts/694021/0b3a3fca-0fad-402b-bd38-fdcbad1ef776.eot?#iefix");
+  src:url("Fonts/694021/0b3a3fca-0fad-402b-bd38-fdcbad1ef776.eot?#iefix") format("eot"),url("Fonts/694021/b4cd926c-1a31-4785-b261-1db1a68c521e.woff2") format("woff2"),url("Fonts/694021/d5af76d8-a90b-4527-b3a3-182207cc3250.woff") format("woff"),url("Fonts/694021/1d238354-d156-4dde-89ea-4770ef04b9f9.ttf") format("truetype"),url("Fonts/694021/b68875cb-14a9-472e-8177-0247605124d7.svg#b68875cb-14a9-472e-8177-0247605124d7") format("svg");
+}
 
 body {
   width: 100%;
@@ -118,7 +143,7 @@ ol li p {
 /* --- Typography   */
 
 body {
-  font-family: "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", "Helvetica", "Segoe UI", Arial, sans-serif;
+  font-family: "HelveticaNeueW02-45Ligh", "HelveticaNeue-Bold", "Helvetica Neue Bold", "Helvetica Neue", "Helvetica", "Segoe UI", Arial, sans-serif;
   font-size: 18px;
   color: black;
 }
@@ -483,26 +508,42 @@ a:active {
 
 .fb-plugin {
   position: absolute;
-  top: -60px;
-  right: 70px;
+  top: 72px;
+  right: 476px;
   overflow: hidden;
 }
 
 .twitter-plugin {
   position: absolute !important;
-  top: -60px;
-  right: 0;
+  top: 72px;
+  right: 414px;
 }
 
 .cirlce-link {
   width: 115px;
   height: 19px;
   display: block;
-  background: url(../img/cirlce-black.png) no-repeat;
   text-indent: -9999px;
   margin-top: 7px;
   margin-left: 103px;
 }
+
+.cirlce-link-black {
+  background: url(../img/cirlce-black.png) no-repeat;
+}
+
+.cirlce-link-yellow {
+  background: url(../img/cirlce-yellow.png) no-repeat;
+}
+
+.cirlce-link-blue {
+  background: url(../img/cirlce-blue.png) no-repeat;
+}
+
+.cirlce-link-pink {
+  background: url(../img/cirlce-pink.png) no-repeat;
+}
+
 
 .faq-container {
   padding: 30px 65px;
@@ -760,4 +801,13 @@ canvas {
 .noty_bar.noty_type_error {
   color: black;
   background: #eb008b;
+}
+
+.takeover-logo {
+  min-width: 70px;
+  min-height: 66px;
+  background: url('../img/takeover.png') no-repeat;
+  position: absolute;
+  top: 27px;
+  left: 20px;
 }

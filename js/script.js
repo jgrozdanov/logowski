@@ -19,19 +19,49 @@
       });
       
       setTimeout( letsGo, 3000 );
-    }; 
+    };
+
+    var cirlceChangeBackground = function() {
+      var cirlce = $('.cirlce-link');
+
+      if(cirlce.hasClass('cirlce-link-black')) {
+        cirlce.removeClass('cirlce-link-black');
+        cirlce.addClass('cirlce-link-yellow');
+        setTimeout(cirlceChangeBackground, 500);
+        return;
+      }
+      if(cirlce.hasClass('cirlce-link-yellow')) {
+        cirlce.removeClass('cirlce-link-yellow');
+        cirlce.addClass('cirlce-link-pink');
+        setTimeout(cirlceChangeBackground, 500);
+        return;
+      }
+      if(cirlce.hasClass('cirlce-link-pink')) {
+        cirlce.removeClass('cirlce-link-pink');
+        cirlce.addClass('cirlce-link-blue');
+        setTimeout(cirlceChangeBackground, 500);
+        return;
+      }
+      if(cirlce.hasClass('cirlce-link-blue')) {
+        cirlce.removeClass('cirlce-link-blue');
+        cirlce.addClass('cirlce-link-black');
+        setTimeout(cirlceChangeBackground, 500);
+        return;
+      }
+    };
 
     letsGo();
+    cirlceChangeBackground();
 
     // make the nav works
     $( '#how-it-works' ).click( function() {
-      $.scrollTo( '.how-it-works', 800 );
+      $.scrollTo( '.how-it-works', 500 );
     });
     $( '#blvd' ).click( function() {
-      $.scrollTo( '.boulevard', 800 );
+      $.scrollTo( '.boulevard', 500 );
     });
     $( '.do-it' ).click( function() {
-      $.scrollTo( '.do-it-form', 800 );
+      $.scrollTo( '.do-it-form', 500 );
     });
 
     // carousel
