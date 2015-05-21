@@ -1,8 +1,3 @@
-/*
-
-  LOGOWSKi Scripting
-
-*/
 
 ( function( $ ) {
 

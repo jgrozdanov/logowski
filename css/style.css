@@ -604,6 +604,7 @@ a:active {
   width: 100%;
   min-height: 150px;
   padding-right: 30px;
+  overflow: hidden;
 }
 
 .words-left {
@@ -681,7 +682,7 @@ canvas {
   background: white;
   margin-left: 20px;
   margin-top: 10px;
-  cursor: pointer;
+  cursor: default;
 }
 
 .canvas-controls {
@@ -719,4 +720,17 @@ canvas {
 .canvas-actions a {
   display: block;
   margin-bottom: 5px;
+}
+
+.preview-image {
+  max-width: 1000px;
+  margin: 200px auto 0;
+  display: block;
+}
+
+.erase {
+  color: white;
+  position: absolute;
+  top: 54px;
+  left: 58px;
 }

@@ -4,7 +4,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Logowski</title>
+  <title>Logowski Cirlce</title>
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/960.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
@@ -14,8 +14,7 @@
 <body>
 
 <div class="overlay">
-  <div class="instagram-big">
-  </div>
+  <img class="preview-image"/>
 </div>
 
 <div class="container_12 top-space-big">
@@ -63,17 +62,7 @@
   <div class="grid_12">
     <div class="pad">
       <div class="faq-container">
-        <div class="faq">
-          <p class="question">Is this for free?</p>
-          <p class="answer">No.</p>
-        </div>
-        <div class="faq">
-          <p class="question">Is this for free?</p>
-          <p class="answer">No.</p>
-        </div>
-        <div class="faq">
-          <p class="question">Is this for free?</p>
-          <p class="answer">No.</p>
+        <div class="faq-response">
         </div>
         <div class="betahaus">
           <a href="http://www.betahaus.bg/" target="_blank" class="betahaus-logo">Betahaus</a>
@@ -89,21 +78,28 @@
 <div class="container_12 without-pad layer1">
   <div class="cirlce-header">
     <div class="cirlce-logo"></div>
-    <div class="photo-upload photo1">
+    <div class="photo-upload photo1" id="photo1">
       <p>your photo 1</p>
+      <span class="erase hidden">&#10060</span>
     </div>
-    <div class="photo-upload photo2">
+    <div class="photo-upload photo2" id="photo2">
       <p>your photo 2</p>
+      <span class="erase hidden">&#10060</span>
     </div>
-    <div class="photo-upload photo3">
+    <div class="photo-upload photo3" id="photo3">
       <p>your photo 3</p>
+      <span class="erase hidden">&#10060</span>
     </div>
   </div>
   <div class="cirlce-form">
-    <form method="POST" target="http://superkosta.herokuapp/com/submit">
+    <form method="POST">
+      <input type="hidden" id="token" name="token" />
+      <input type="file" class="hidden" name="photo1" />
+      <input type="file" class="hidden" name="photo2" />
+      <input type="file" class="hidden" name="photo3" />
       <input type="text" class="form-name" name="name" placeholder="name:"/>
       <input type="text" class="form-age" name="age" placeholder="age:" />
-      <input type="text" class="form-mobile" name="age" placeholder="mobile:" />
+      <input type="text" class="form-mobile" name="mobile" placeholder="mobile:" />
       <input type="email" class="form-email" name="email" placeholder="email:" />
       <div class="relative">
         <textarea class="form-yourself" name="yourself" placeholder="why do you like yourself?"></textarea>
@@ -112,6 +108,7 @@
       <div class="canvas relative">
         <p>draw me something</p>
         <canvas class="relative layer1" id="canvas" width="700" height="550"></canvas>
+        <input type="hidden" name="canvasDataUri" id="canvasDataUri" />
         <div class="canvas-controls layer5">
           <div class="canvas-colors">
             <a href="#" class="canvas-black">black</a>
@@ -167,7 +164,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.3/jquery.scrollTo.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
 <script src="js/canvas.js"></script>
+<script src="js/cirlce.js"></script>
 
 <script>
   (function (i, s, o, g, r, a, m) {
