@@ -109,7 +109,9 @@ $(document).ready(function() {
     $(this).addClass('hidden');
   });
 
-  $('.form-yourself').on('keyup', function(e) {
+  var textarea = $('.form-yourself');
+
+  textarea.on('keyup', function(e) {
     var val = $(this).val(),
         wordsLeft = $('.words-left'),
         count = 100;
@@ -119,22 +121,29 @@ $(document).ready(function() {
     }
     else {
       count = 100 - val.match(/\S+/g).length;
-      if(count > 0) {
-        wordsLeft.text(100 - val.match(/\S+/g).length);
+      if(count >= 0) {
+        wordsLeft.text(100 - val.words().length);
       }
     }
   });
 
-  $('.form-yourself').on('keypress', function(e) {
+  textarea.on('keypress', function(e) {
     var val = $(this).val(),
         count;
     if(val) {
-      count = 99 - val.match(/\S+/g).length;
+      count = 100 - val.words().length;
     }
 
-    if(count < 0) {
+    var code = e.keyCode || e.which;
+
+    if(count <= 0 && code === 32) {
       e.preventDefault();
     }
+  });
+
+  textarea.on('paste', function(e) {
+    displayMessage('error', 'Nope. No pasting.');
+    e.preventDefault();
   });
 
   $.ajax({
