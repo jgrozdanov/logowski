@@ -723,7 +723,7 @@ canvas {
   background: white;
   margin-left: 20px;
   margin-top: 10px;
-  cursor: default;
+  cursor: crosshair;
 }
 
 .canvas-controls {
@@ -782,6 +782,13 @@ canvas {
   padding: 20px !important;
 }
 
+.noty_message:before {
+  content: '❌';
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
 #noty_center_layout_container li {
   border: none !important;
   border-radius: 0 !important;
@@ -799,7 +806,7 @@ canvas {
 }
 
 .noty_bar.noty_type_error {
-  color: black;
+  color: white;
   background: #eb008b;
 }
 

@@ -1,7 +1,7 @@
 
 
 $(document).ready(function() {
-  var backendAddress = 'http://localhost:3000';
+  var backendAddress = 'http://superkosta.herokuapp.com';
 
   $( window ).stellar({
     horizontalScrolling: false,
@@ -164,11 +164,19 @@ $(document).ready(function() {
     url: backendAddress + '/faqJson',
     crossDomain: true,
     success: function(data, status, xhr) {
+      var faqResponseEl = $('.faq-response');
       if(data && status === 'success') {
         data.faq.forEach(function(el) {
-          $('.faq-response').append(
-            '<div class="faq"><p class="question">' + el.question + '</p><p class="answer">' + el.answer + '</p></div>'
+          faqResponseEl.append(
+            '<div class="faq"><p class="question"></p><p class="answer"></p></div>'
           );
+          faqResponseEl.find('.faq')
+            .last()
+            .find('.question')
+            .html(el.question)
+            .parent()
+            .find('.answer')
+            .html(el.answer);
         });
       }
     }
@@ -208,7 +216,7 @@ $(document).ready(function() {
       success: function(data) {
         $('#token').val('');
         submitButton.attr('disabled', true);
-        displayMessage('success', 'Sent successfully');
+        displayMessage('success', 'Success');
       },
       error: function(xhr, status, error) {
         var responseJson;

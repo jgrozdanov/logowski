@@ -35,7 +35,7 @@ $(document).ready(function() {
     context.fillStyle = 'white';
     context.fillRect(0,0,context.canvas.width, context.canvas.height);
     context.lineJoin = 'round';
-    context.lineWidth = 3;
+    context.lineWidth = 2.5;
 
     for(var i = 0; i < positions.length; i++) {
       context.strokeStyle = positions[i].color;
